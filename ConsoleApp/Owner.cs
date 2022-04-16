@@ -9,6 +9,32 @@ namespace ConsoleApp
         FIO fio;
         private int income;
         private int expenses;
+
+        public int Income
+        {
+            set
+            {
+                if (value < 1)
+                    Console.WriteLine("Число меньше 1.");
+                else
+                    income = value;
+            }
+            get { return income; }
+        }
+        public int Expenses
+        {
+            set
+            {
+                if (value < 1)
+                    Console.WriteLine("Число меньше 1.");
+                else
+                    expenses = value;
+            }
+            get { return expenses; }
+        }
+
+
+
         public void init(FIO fio, int income, int expenses)
         {
             this.fio = fio;
@@ -17,7 +43,6 @@ namespace ConsoleApp
         }
         public void enter()
         {
-            Console.Write("Введите ФИО владельца:\n");
             fio.enter();
             Console.Write("Введите доходы: ");
             income = Convert.ToInt32(Console.ReadLine());

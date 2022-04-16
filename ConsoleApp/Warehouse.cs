@@ -13,6 +13,20 @@ namespace ConsoleApp
             this.product = product;
             this.station = station;
         }
+        public string[] Product { get; set; }
+
+        public int Station
+        {
+            set
+            {
+                if (value < 1)
+                    Console.WriteLine("Число меньше 1.");
+                else
+                    station = value;
+            }
+            get { return station; }
+        }
+
         public void enter()
         {
             Console.Write("Введите товар:");
@@ -24,9 +38,7 @@ namespace ConsoleApp
         {
             Console.WriteLine($"Склад:\nТовар:");
             foreach (string element in product)
-            {
                 Console.Write($"{element} ");
-            }
             Console.WriteLine($"\nКол-во пунктов приема: {station}");
         }
 

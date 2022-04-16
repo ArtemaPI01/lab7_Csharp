@@ -17,6 +17,11 @@ namespace ConsoleApp
             this.surname = surname;
             this.patronymic = patronymic;
         }
+
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public string Patronymic { get; set; }
+
         public void enter()
         {
             Console.Write("Введите имя: ");

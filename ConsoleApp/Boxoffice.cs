@@ -6,7 +6,7 @@ namespace ConsoleApp
 {
     class Boxoffice
     {
-        FIO fio;
+        private FIO fio;
         private int workers;
         private int count;
         public void init(FIO fio, int workers, int count)
@@ -15,9 +15,33 @@ namespace ConsoleApp
             this.workers = workers;
             this.count = count;
         }
+
+        public int Workers
+        {
+            set
+            {
+                if (value < 1)
+                    Console.WriteLine("Число меньше 1.");
+                else
+                    workers = value;
+            }
+            get { return workers; }
+        }
+
+        public int Сount
+        {
+            set
+            {
+                if (value < 1)
+                    Console.WriteLine("Число меньше 1.");
+                else
+                    count = value;
+            }
+            get { return count; }
+        }
+
         public void enter()
         {
-            Console.Write("Введите ФИО старшего кассира:\n");
             fio.enter();
             Console.Write("Введите кол-во кассиров: ");
             workers = Convert.ToInt32(Console.ReadLine());

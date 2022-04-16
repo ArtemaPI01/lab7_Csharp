@@ -17,6 +17,12 @@ namespace ConsoleApp
             this.street = street;
             this.time = time;
         }
+
+        public string Name { get; set; }
+        public string Type { get; set; }
+        public string Street { get; set; }
+        public string Time { get; set; }
+
         public void enter()
         {
             Console.Write("Введите название:");
