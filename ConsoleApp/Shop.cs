@@ -36,7 +36,7 @@ namespace ConsoleApp
         }
         public void print()
         {
-            Console.WriteLine($"Название: {name}  Тип: {type}  Улица: {street}  Часы работы: {time}");
+            Console.WriteLine($"Название: {name}  Тип: {type}  Улица: {street}  Часы работы: {time}\n");
         }
         public void cloakShop()
         {

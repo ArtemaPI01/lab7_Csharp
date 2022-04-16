@@ -4,7 +4,6 @@ namespace ConsoleApp
 {
     class Program
     {
-
         static void Main(string[] args)
         {
             FIO fio = new FIO();
@@ -13,10 +12,15 @@ namespace ConsoleApp
             Alisher.init(fio, 0, 0);
             Alisher.enter();
             Alisher.print();
-            Shop shop = new Shop();
-            shop.enter();
-            shop.print();
-            shop.cloakShop();
+            int N = 2;
+            Shop[] shop = new Shop[N];
+            for (int i = 0; i < N; i++)
+            {
+                shop[i] = new Shop();
+                shop[i].enter();
+                shop[i].print();
+                shop[i].cloakShop();
+            }
             Warehouse home = new Warehouse();
             home.enter();
             home.print();
