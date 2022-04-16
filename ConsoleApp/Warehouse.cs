@@ -36,22 +36,20 @@ namespace ConsoleApp
         }
         public void print()
         {
-            Console.WriteLine($"Склад:\nТовар:");
+            Console.Write($"Склад:\nТовар: ");
             foreach (string element in product)
                 Console.Write($"{element} ");
             Console.WriteLine($"\nКол-во пунктов приема: {station}");
         }
 
-        public int cloakWarehouse(int x)
+        public void cloakWarehouse(ref int time, int x)
         {
             int i = 0;
-            int time = 0;
             while (i < x)
             {
                 time += 15;
                 i += station;
             }
-            return time;
         }
 
         public void Poisk(string str)

@@ -53,11 +53,13 @@ namespace ConsoleApp
         {
             Console.WriteLine("\nИнформация о владельце:\n");
             fio.print();
-            Console.WriteLine($"Доходы: {income}  Расходы: {expenses} Прибыль: {profitOwner()}");
+            int profit;
+            profitOwner(out profit);
+            Console.WriteLine($"Доходы: {income}  Расходы: {expenses} Прибыль: {profit}");
         }
-        public int profitOwner()
+        void profitOwner(out int profit)
         {
-            return income - expenses;
+            profit = income - expenses;
         }
     }
 }

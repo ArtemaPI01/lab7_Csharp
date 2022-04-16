@@ -26,7 +26,9 @@ namespace ConsoleApp
             home.print();
             home.Poisk("AVS");
             int a = 20;
-            Console.WriteLine($"Время разгрузки {a} тонн товара: {home.cloakWarehouse(a)} минут");
+            int time = 0;
+            home.cloakWarehouse(ref time, a);
+            Console.WriteLine($"Время разгрузки {a} тонн товара: { time } минут");
             Boxoffice box = new Boxoffice();
             box.init(fio, 10, 10);
             Console.WriteLine($"Кол-во рабочих: {box.Workers}");
