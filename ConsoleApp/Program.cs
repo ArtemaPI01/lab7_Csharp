@@ -30,11 +30,16 @@ namespace ConsoleApp
             home.cloakWarehouse(ref time, a);
             Console.WriteLine($"Время разгрузки {a} тонн товара: { time } минут");
             Boxoffice box = new Boxoffice();
-            box.init(fio, 10, 10);
+            box.Init(fio, 10, 10);
             Console.WriteLine($"Кол-во рабочих: {box.Workers}");
             box.Workers = 20;
-            box.print();
-            box.cloakBoxoffice(100);
+            box++;
+            box.Print();
+            Boxoffice box1 = new Boxoffice();
+            box1.Init(fio, 10, 10);
+            box1 += box;
+            box1.Print();
+            box1.CloakBoxoffice(100);
         }
     }
 }
