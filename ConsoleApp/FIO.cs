@@ -35,5 +35,11 @@ namespace ConsoleApp
         {
             Console.WriteLine($"Имя: {name}  Фамилия: {surname}  Отчество: {patronymic} ");
         }
+        public void print(Boxoffice box)
+        {
+            Console.WriteLine("\nИнформация о кассе:\nФИО старшего кассира:");
+            Console.WriteLine($"Имя: {name}  Фамилия: {surname}  Отчество: {patronymic} ");
+            Console.WriteLine($"Кассиры: {box.Workers}  Кассы: {box.Сount}");
+        }
     }
 }

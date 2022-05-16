@@ -29,6 +29,11 @@ namespace ConsoleApp
             get { return workers; }
         }
 
+        public FIO Fio
+        {
+            get { return fio; }
+        }
+
         public int Сount
         {
             set
@@ -43,6 +48,7 @@ namespace ConsoleApp
 
         public void Enter()
         {
+            fio = new FIO();
             fio.enter();
             Console.Write("Введите кол-во кассиров: ");
             workers = Convert.ToInt32(Console.ReadLine());
@@ -51,9 +57,7 @@ namespace ConsoleApp
         }
         public void Print()
         {
-            Console.WriteLine("\nИнформация о кассе:\nФИО старшего кассира:");
-            fio.print();
-            Console.WriteLine($"Кассиры: {workers}  Кассы: {count}");
+            fio.print(this);
         }
         public void CloakBoxoffice(int x)
         {

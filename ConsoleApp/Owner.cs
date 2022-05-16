@@ -9,7 +9,6 @@ namespace ConsoleApp
         FIO fio;
         private int income;
         private int expenses;
-
         public int Income
         {
             set
@@ -20,6 +19,10 @@ namespace ConsoleApp
                     income = value;
             }
             get { return income; }
+        }
+        public FIO Fio
+        {
+            get { return fio; }
         }
         public int Expenses
         {
@@ -32,9 +35,6 @@ namespace ConsoleApp
             }
             get { return expenses; }
         }
-
-
-
         public void init(FIO fio, int income, int expenses)
         {
             this.fio = fio;
@@ -43,6 +43,7 @@ namespace ConsoleApp
         }
         public void enter()
         {
+            fio = new FIO();
             fio.enter();
             Console.Write("Введите доходы: ");
             income = Convert.ToInt32(Console.ReadLine());
